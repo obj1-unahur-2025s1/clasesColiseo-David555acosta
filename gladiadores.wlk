@@ -1,6 +1,7 @@
 import armas.*
 import armaduras.*
 class Mirmillones {
+    const tipo = "Mirmillon"
     var vida = 100
     method vida() = vida
     const property arma
@@ -19,9 +20,12 @@ class Mirmillones {
     method recibirDaño(cantidad) {
         vida = vida - 1
     }
+
+    method recibirCuracion() {}
 }
 
 class Dimachaerus {
+    const tipo = "Dimachaerus"
     var vida = 100
     method vida() = vida
     const property armas = #{}
@@ -36,5 +40,7 @@ class Dimachaerus {
       destreza += 1
       gladiador.atacar(self)
     }
+
+     method recibirCuracion() {}
 }
 

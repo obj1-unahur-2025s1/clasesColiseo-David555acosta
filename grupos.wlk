@@ -1,7 +1,7 @@
 import gladiadores.*
 
-class Grupos {
-    const property nombre
+class Grupo {
+    var nombre 
     const property cantidadPeleas
 
     const gladiadores = #{}
@@ -16,6 +16,14 @@ class Grupos {
 
     method campeonDeGrupo() {
         return gladiadores.max({g => g.vida()})
+    }
+
+    method nombreDeGrupo() {
+      if (gladiadores.first().tipo() == "Mirmillon") {
+        nombre = "Mirmillolandia"
+      } else {
+        nombre = "D" + gladiadores.last().poderDeAtaque().toString()
+      }
     }
         
 }
